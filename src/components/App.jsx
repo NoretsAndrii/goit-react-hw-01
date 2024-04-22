@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './App.css';
 
-import Profile from './Profile';
+import Profile from './profile/Profile';
 import userData from '../userData.json';
 
-import FriendList from './FriendList';
+import FriendList from './friend_list/FriendList';
 import friends from '../friends.json';
 
-import TransactionHistory from './TransactionHistory';
+import TransactionHistory from './transaction_history/TransactionHistory';
 import transactions from './transactions.json';
 
 const App = () => {
