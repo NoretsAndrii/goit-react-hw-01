@@ -1,42 +1,14 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
-import Profile from './Profile'
-import userData from "../userData.json";
+import Profile from './Profile';
+import userData from '../userData.json';
+
 import FriendList from './FriendList';
+import friends from '../friends.json';
 
-const friends = [
-  {
-    avatar: "https://cdn-icons-png.flaticon.com/512/1998/1998592.png",
-    name: "Mango",
-    isOnline: true,
-    id: 1812
-  },
-  {
-    avatar: "https://cdn-icons-png.flaticon.com/512/616/616438.png",
-    name: "Kiwi",
-    isOnline: false,
-    id: 1137
-  },
-  {
-    avatar: "https://cdn-icons-png.flaticon.com/512/1623/1623681.png",
-    name: "Ajax",
-    isOnline: true,
-    id: 1213
-  },
-  {
-    avatar: "https://cdn-icons-png.flaticon.com/512/2977/2977285.png",
-    name: "Jay",
-    isOnline: true,
-    id: 1714
-  },
-  {
-    avatar: "https://cdn-icons-png.flaticon.com/512/1998/1998749.png",
-    name: "Poly",
-    isOnline: false,
-    id: 1284
-  }
-];
+import TransactionHistory from './TransactionHistory';
+import transactions from './transactions.json';
 
 const App = () => {
   return (
@@ -49,6 +21,7 @@ const App = () => {
         stats={userData.stats}
       />
       <FriendList friends={friends} />
+      <TransactionHistory items={transactions} />
     </>
   );
 };
