@@ -1,11 +1,11 @@
-const TransactionHistoryItem = ({ type, amount, currency }) => {
+import css from './TransactionHistoryItemn.module.css';
+
+export default function TransactionHistoryItemn({ type, amount, currency }) {
   return (
     <>
-      <td>{type}</td>
+      <td className={css['type-column']}>{type}</td>
       <td>{amount}</td>
       <td>{currency}</td>
     </>
   );
-};
-
-export default TransactionHistoryItem;
+}

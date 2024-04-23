@@ -1,0 +1,15 @@
+.tran-history-table {
+  width: 450px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th {
+  border: 1px solid black;
+  color: white;
+  background-color: rgb(86, 82, 82);
+}
+
+tbody tr:nth-child(even) {
+  background-color: lightgrey;
+}

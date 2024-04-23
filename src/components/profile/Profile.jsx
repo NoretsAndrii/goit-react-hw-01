@@ -1,37 +1,47 @@
-import './Profile.css';
+import css from './Profile.module.css';
 
-const Profile = ({ name, tag, location, image, stats }) => {
+export default function Profile({
+  name,
+  tag,
+  location,
+  image,
+  stats: { followers, views, likes },
+}) {
   return (
-    <div className="profile-card">
-      <div className="profile-card-main">
-        <img className="profile-card-main-img" src={image} alt={name} />
-        <p className="profile-card-main-name">{name}</p>
-        <p className="profile-card-main-text">@{tag}</p>
-        <p className="profile-card-main-text">{location}</p>
+    <div className={css['profile-card']}>
+      <div className={css['profile-card-main']}>
+        <img className={css['profile-card-main-img']} src={image} alt={name} />
+        <p className={css['profile-card-main-name']}>{name}</p>
+        <p className={css['profile-card-main-text']}>@{tag}</p>
+        <p className={css['profile-card-main-text']}>{location}</p>
       </div>
 
-      <ul className="profile-card-info-list">
-        <li className="profile-card-info-list-item">
-          <span className="profile-card-info-list-item-title">Followers</span>
-          <span className="profile-card-info-list-item-count">
-            {stats.followers}
+      <ul className={css['profile-card-info-list']}>
+        <li className={css['profile-card-info-list-item']}>
+          <span className={css['profile-card-info-list-item-title']}>
+            Followers
+          </span>
+          <span className={css['profile-card-info-list-item-count']}>
+            {followers}
           </span>
         </li>
-        <li className="profile-card-info-list-item">
-          <span className="profile-card-info-list-item-title">Views</span>
-          <span className="profile-card-info-list-item-count">
-            {stats.views}
+        <li className={css['profile-card-info-list-item']}>
+          <span className={css['profile-card-info-list-item-title']}>
+            Views
+          </span>
+          <span className={css['profile-card-info-list-item-count']}>
+            {views}
           </span>
         </li>
-        <li className="profile-card-info-list-item">
-          <span className="profile-card-info-list-item-title">Likes</span>
-          <span className="profile-card-info-list-item-count">
-            {stats.likes}
+        <li className={css['profile-card-info-list-item']}>
+          <span className={css['profile-card-info-list-item-title']}>
+            Likes
+          </span>
+          <span className={css['profile-card-info-list-item-count']}>
+            {likes}
           </span>
         </li>
       </ul>
     </div>
   );
-};
-
-export default Profile;
+}

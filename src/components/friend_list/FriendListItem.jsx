@@ -1,13 +1,18 @@
-import PropTypes from 'prop-types';
+import css from './FriendListItem.module.css';
 
-const FriendListItem = ({ avatar, name, isOnline }) => {
+export default function FriendListItem({ avatar, name, isOnline }) {
   return (
-    <div>
-      <img src={avatar} alt={name} width="48" />
+    <>
+      <img
+        className={css['friend-list-item-img']}
+        src={avatar}
+        alt={name}
+        width="48"
+      />
       <p>{name}</p>
-      <p>{isOnline ? 'Online' : ' Offline'}</p>
-    </div>
+      <p className={isOnline ? css.green : css.red}>
+        {isOnline ? 'Online' : ' Offline'}
+      </p>
+    </>
   );
-};
-
-export default FriendListItem;
+}

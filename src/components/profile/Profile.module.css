@@ -2,7 +2,7 @@
   border: 2px solid black;
   border-radius: 10px;
   overflow: hidden;
-  min-width: 320px;
+  width: 320px;
 }
 
 .profile-card-main {
